@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Don't Get Distracted • Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="settings-body">
+    <div class="settings-root">
+      <header class="settings-header">
+        <h1 class="app-title">Don't Get Distracted</h1>
+        <p class="subtitle">Minimal controls to keep you focused.</p>
+      </header>
+
+      <section class="card">
+        <h2>Focus Rules</h2>
+        <label class="field">
+          <span>Consecutive visits threshold</span>
+          <input id="threshold" type="number" min="1" />
+        </label>
+
+        <label class="field">
+          <span>Alert message</span>
+          <textarea id="alertMessage" rows="3"></textarea>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Tracked sites</h2>
+        <p class="hint">Patterns use * wildcards, e.g. youtube.com/shorts/*</p>
+        <div id="tracked-sites"></div>
+        <button id="add-site" class="secondary-button">+ Add site</button>
+      </section>
+
+      <section class="card">
+        <h2>Appearance</h2>
+        <label class="field inline">
+          <input id="darkMode" type="checkbox" />
+          <span>Dark mode</span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Status</h2>
+        <p>Current consecutive count: <strong id="currentCount">0</strong></p>
+        <p>Dismiss snooze remaining: <strong id="snoozeRemaining">0</strong></p>
+        <div style="display: flex; gap: 8px; margin-top: 8px;">
+          <button id="reset-counter" class="secondary-button">Reset Counter & Snooze</button>
+          <button id="test-alert" class="secondary-button">Test Alert</button>
+        </div>
+      </section>
+
+      <footer class="settings-footer">
+        <button id="save" class="primary-button">Save</button>
+        <span id="status" class="status-text"></span>
+      </footer>
+    </div>
+
+    <script src="settings.js"></script>
+  </body>
+</html>
