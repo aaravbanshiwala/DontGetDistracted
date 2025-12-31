@@ -42,7 +42,6 @@ A minimal Chrome extension that helps you stay focused by alerting you when you'
 
 The extension monitors your browsing. When you visit tracked sites consecutively (e.g., scrolling through YouTube Shorts), a counter increments. Once you hit the threshold, a full-page alert reminds you to get back to work. Visiting any non-tracked site resets the counter.
 
----
 ## LICENSE
 ```
 © 2026 Aarav. All Rights Reserved.
