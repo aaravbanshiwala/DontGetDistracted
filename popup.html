@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Don't Get Distracted</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="popup-body">
+    <div class="popup-root">
+      <header class="popup-header">
+        <div class="popup-logo">Don't Get Distracted</div>
+        <div class="popup-icons">
+          <div class="popup-icon" id="open-settings">⚙️</div>
+        </div>
+      </header>
+      <main class="popup-main">
+        <div class="popup-cards">
+          <div class="popup-card card lavender">
+            <div class="popup-card-icon">⏱️</div>
+            <div class="popup-card-value" id="current-count">7 of 10</div>
+            <div class="popup-card-label">Consecutive Visits</div>
+          </div>
+          <div class="popup-card card pink">
+            <div class="popup-card-icon">🔄</div>
+            <button id="reset-counter" class="secondary-button">Reset Counter</button>
+          </div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label">Progress to Alert</div>
+          <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+          <div class="progress-percentage" id="progress-percentage">70% (7/10)</div>
+        </div>
+        <div class="current-site">
+          <div class="site-status">🎯 Focused - Keep going!</div>
+        </div>
+        <footer class="popup-footer">
+          <button id="view-settings" class="primary-button">View Settings</button>
+        </footer>
+      </main>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
