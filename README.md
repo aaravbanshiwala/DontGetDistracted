@@ -43,25 +43,25 @@ A minimal Chrome extension that helps you stay focused by alerting you when you'
 The extension monitors your browsing. When you visit tracked sites consecutively (e.g., scrolling through YouTube Shorts), a counter increments. Once you hit the threshold, a full-page alert reminds you to get back to work. Visiting any non-tracked site resets the counter.
 
 ---
-
-## License
-
-**© 2024 Aarav. All Rights Reserved.**
+## LICENSE
+```
+© 2026 Aarav. All Rights Reserved.
 
 This software is proprietary and confidential. Unauthorized copying, distribution, modification, public display, or public performance of this software is strictly prohibited.
 
-**Terms:**
+Terms:
 
-1. **No Redistribution**: You may not share, distribute, sublicense, sell, or provide access to this software to any third party without explicit written permission from the author.
+1. No Redistribution: You may not share, distribute, sublicense, sell, or provide access to this software to any third party without explicit written permission from the author.
 
-2. **Personal Use Only**: This license grants you the right to use this software for personal purposes only. Commercial use requires a separate license agreement.
+2. Personal Use Only: This license grants you the right to use this software for personal purposes only. Commercial use requires a separate license agreement.
 
-3. **No Modification for Distribution**: You may not modify this software and distribute the modified version.
+3. No Modification for Distribution: You may not modify this software and distribute the modified version.
 
-4. **Revocation**: The author reserves the right to revoke access at any time for violation of these terms.
+4. Revocation: The author reserves the right to revoke access at any time for violation of these terms.
 
-5. **No Warranty**: This software is provided "as is" without warranty of any kind.
+5. No Warranty: This software is provided "as is" without warranty of any kind.
 
 By using this software, you agree to these terms. Violation of this license may result in termination of access and legal action.
 
 For licensing inquiries, contact the author.
+```
