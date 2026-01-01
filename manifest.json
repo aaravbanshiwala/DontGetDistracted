@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Don't Get Distracted",
+  "description": "Alerts you when you're spending too much time on distracting sites.",
+  "version": "1.2",
+  "permissions": ["tabs", "storage", "scripting"],
+  "host_permissions": [
+    "*://www.youtube.com/shorts/*",
+    "*://youtube.com/shorts/*",
+    "*://www.tiktok.com/*",
+    "*://tiktok.com/*",
+    "*://www.instagram.com/*",
+    "*://instagram.com/*",
+    "https://licensecheckerwhop.abhishek1317.workers.dev/*"
+  ],
+  "background": {
+  "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Don't Get Distracted",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "settings.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "web_accessible_resources": [{
+    "resources": ["src/utils/licenseManager.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
