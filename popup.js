@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const messageDiv = document.getElementById('message');
 
   // Dashboard elements
-  const settingsBtn = document.getElementById('open-settings');
   const viewSettingsBtn = document.getElementById('view-settings');
-  const resetBtn = document.getElementById('reset-counter');
+  const resetBtn = document.getElementById('reset-btn');
 
   // Helper functions
   function showView(viewId) {
@@ -206,14 +205,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // Event Listeners - Dashboard
-  if (settingsBtn) {
-    settingsBtn.addEventListener('click', () => {
-      if (chrome.runtime.openOptionsPage) {
-        chrome.runtime.openOptionsPage();
-      } else {
-        window.open('settings.html');
-      }
+// ✅ Settings Button — Opens settings.html
+const settingsBtn = document.getElementById('settings-btn'); // ← corrected ID
+if (settingsBtn) {
+  settingsBtn.addEventListener('click', () => {
+    // Prefer chrome.runtime.openOptionsPage if settings.html is registered as options_page
+    // Otherwise, open directly in new tab (more reliable for Manifest V3)
+    chrome.tabs.create({ url: chrome.runtime.getURL('settings.html') });
+  });
+}
+  // ✅ Reset License on Whop button
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      chrome.tabs.create({ url: 'https://whop.com/dgd-extension' });
     });
   }
 
@@ -236,6 +240,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     });
   }
+
+
 
   // Initialize everything
   await initLicense();
